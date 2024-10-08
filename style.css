@@ -137,7 +137,7 @@ body {
     }
 }
 
-.container {}
+/* .container {}
 
 .album__wrapper {}
 
@@ -145,7 +145,7 @@ body {
 
 .swiper-album-1 {}
 
-.swiper-wrapper {}
+.swiper-wrapper {} */
 
 .swiper-slide {
     img {
@@ -153,11 +153,11 @@ body {
     }
 }
 
-.swiper-album-2 {}
+/* .swiper-album-2 {}
 
 .meet {}
 
-.container {}
+.container {} */
 
 .meet__wrapper {
     display: grid;
@@ -269,22 +269,22 @@ body {
     }
 
     @media (max-width: 900px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-    "card card"
-    "card2 card3"
-    "card4 card5"; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card card"
+            "card2 card3"
+            "card4 card5";
     }
 
     @media (max-width: 500px) {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-      "card"
-      "card2"
-      "card3"
-      "card4" 
-      "card5"; 
-      }
+        grid-template-areas:
+            "card"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+    }
 
 
 }
@@ -323,6 +323,7 @@ body {
             overflow: hidden;
         }
     }
+
     @media (max-width: 768px) {
         min-height: 280px;
     }
@@ -350,4 +351,143 @@ body {
 .card5 {
     background-image: url(./img/plans-5.png);
 
+}
+
+.team {
+    padding-bottom: 100px;
+}
+
+.team__wrapper {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+
+
+    @media (max-width:1100px) {
+        grid-template-columns: 1fr;
+    }
+    h2 {
+       
+
+
+        /* font-size: 180px; */
+        font-size: clamp(3.75rem, 1.25rem + 10vw, 11.25rem);
+        text-transform: uppercase;
+        
+    }
+    gap: 50px;
+}
+
+.team__box {
+
+}
+
+.team__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.team__card {
+    /* min-height: 290px; */
+    min-height: clamp(6.25rem, 3.125rem + 12.5vw, 15.625rem);
+    /* max-height: 300px;  */
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 35px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    color: beige;
+    
+    transition: 0.5s;
+    text-transform: uppercase;
+    /* aspect-ratio: 2/1; */
+    
+
+    &:hover {
+        background-size: 140%;
+        filter: brightness(1) sepia(5%) saturate(700%);
+    }
+
+    &:nth-child(1) {
+        background-image: url(./img/team-2.png);
+    }
+    &:nth-child(2) {
+        background-image: url(./img/team-4.png);
+    }
+    &:nth-child(3) {
+        background-image: url(./img/team-3.png);
+    }
+    &:nth-child(4) {
+        background-image: url(./img/team-1.png);
+        background-size: 152%;
+        /* filter: brightness(1) sepia(5%) saturate(700%); */
+        &:hover {
+            background-size: 170%;
+        }
+
+    }
+}
+
+.team__img {
+    width: 100%;
+    @media (max-width:1100px) {
+        display: none;
+    }
+}
+
+
+.team__swiper {
+    .swiper-slide {
+        min-height: 250px;
+        border: 2px solid black;
+
+        display: flex;
+        align-items: end;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 25px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &:nth-child(1),  &:nth-child(5) {
+            background-image: url(./img/team-2.png);
+        }
+        &:nth-child(2),  &:nth-child(6) {
+            background-image: url(./img/team-4.png);
+        }
+        &:nth-child(3),  &:nth-child(7) {
+            background-image: url(./img/team-3.png);
+        }
+        &:nth-child(4),  &:nth-child(8){
+            background-image: url(./img/team-1.png);
+            /* background-size: 152%; */
+            /* filter: brightness(1) sepia(5%) saturate(700%); */
+            /* &:hover {
+                background-size: 170%;
+            } */
+    
+        }
+    }
+    display: none;
+    
+}
+
+.team__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    max-width: 400px;
+    margin: 30px auto;
+    div {
+        position: static;
+        margin: 0;
+    }
 }
